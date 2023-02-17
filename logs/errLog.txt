@@ -3,3 +3,4 @@
 20230216	23:53:32	b141da72-1e8b-42c2-b1b3-f99250a7ff75	Error: NOT ALLOWED BY CORS
 20230217	00:20:58	e4e4151e-4a6a-478b-ba02-e0f60f969ff6	TypeError: res.send.json is not a function
 20230217	00:20:59	9e75356c-cc38-4c57-823a-a595b213b823	TypeError: res.send.json is not a function
+20230217	15:14:11	179652b5-1011-4397-a63a-d6403b76d12b	SyntaxError: Unexpected token : in JSON at position 32
