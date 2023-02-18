@@ -5,7 +5,11 @@ const usersDB = {
   },
 };
 
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+require("dotenv").config();
+const fsPromisses = require("fs").promises;
+const path = require("path");
 
 const userLogin = async (req, res) => {
   const { user, pwd } = req.body;
@@ -14,13 +18,23 @@ const userLogin = async (req, res) => {
   }
   const foundUser = usersDB.users.find((person) => person.username === user);
   if (!foundUser) {
-    return res.sendStatus(401); // Unauthorized
+    res.sendStatus(401); // Unauthorized
   }
   // evaluate password
 
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
-    // create JWTs
+    const accessToken = jwt.sign(
+      { username: foundUser.username },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "30s" }
+    );
+    const refreshToken = jwt.sign(
+      { username: foundUser.username },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "1d" }
+    );
+
     res.json({ success: `User ${user} is logged in!` });
   } else {
     res.sendStatus(401);
