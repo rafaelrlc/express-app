@@ -44,9 +44,9 @@ const userLogin = async (req, res) => {
     ); // returns all users beside the current user
 
     const currentUser = { ...foundUser, refreshToken }; // {...foundUser, refreshToken} means {username, password, refreshToken}
-    console.log(currentUser, othersUsers);
-    usersDB.setUsers([...othersUsers, foundUser]); // {...othersUsers, foundUsers} means {user1, user2, user3, ..., othersUsers}
 
+    usersDB.setUsers([...othersUsers, currentUser]); // {...othersUsers, foundUsers} means {user1, user2, user3, ..., othersUsers}
+    console.log(usersDB);
     await fsPromisses.writeFile(
       path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)

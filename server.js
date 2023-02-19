@@ -7,14 +7,20 @@ const { logger, logEvents } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
+const credentials = require("./middleware/credentials");
 
 const PORT = process.env.PORT || 3500;
 
 app.use(logger);
 
-// Middleware
+// Middlewares
 
-app.use(cors(corsOptions)); // Cross Origin Resource Sharing
+// Handle options credentials check - before CORS.
+// and fetch cookies credentials requirement.
+app.use(credentials);
+
+// Cross Origin Resource Sharing
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false })); // built-in middleware to handle urlencoded data
 app.use(express.json()); // built-in middleware for json
@@ -29,6 +35,8 @@ app.use("/", express.static(path.join(__dirname, "/public"))); // set public
 app.use("/", require("./routes/root")); // set root("/") route
 app.use("/register", require("./routes/api/register"));
 app.use("/auth", require("./routes/api/auth"));
+app.use("/refresh", require("./routes/api/refresh"));
+app.use("/logout", require("./routes/api/logout"));
 
 app.use(verifyJWT); // tudo abaixo vai precisar passar pelo verifyJWT middleware
 
