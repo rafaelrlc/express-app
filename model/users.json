@@ -1,39 +1,38 @@
 [
   {
     "username": "rafaelrlc",
-    "roles": {
-      "User": 2001,
-      "Editor": 1984,
-      "Admin": 5150
-    },
+    "roles": { "User": 2001, "Editor": 1984, "Admin": 5150 },
     "password": "$2b$10$9yc.hVU8t1M2ThmA1ne/XuFcj.IcWDvfA4.Q6Nu8JvMZIqaoyI6ku",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZmFlbHJsYyIsImlhdCI6MTY3Njg1MjQzNywiZXhwIjoxNjc2OTM4ODM3fQ.acCsg9MC7Wp3ufpLQGXIIB9IGM7Ijva0BGUMiKJkGic"
   },
   {
     "username": "viniccius13",
-    "roles": {
-      "User": 2001
-    },
+    "roles": { "User": 2001 },
     "password": "$2b$10$TDqk97WJoD4ZEBpdbGqOYOAcoOqz8pL.1tn67CCOhgjIq1IURkOE6",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpbmljY2l1czEzIiwiaWF0IjoxNjc2OTA2MTAwLCJleHAiOjE2NzY5OTI1MDB9.DFEPJkhw7IfNm1Bxw8B5K5wO7dy8X7-bCv4Yj8YeKHw"
   },
   {
     "username": "venomextreme",
-    "roles": {
-      "User": 2001,
-      "Editor": 1984
-    },
+    "roles": { "User": 2001, "Editor": 1984 },
     "password": "$2b$10$cEphyJ6v.WqsqzROYWHHROYN0ejqdfIOXhlNUgKgi3I17LxfxvUdu",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZlbm9tZXh0cmVtZSIsImlhdCI6MTY3NjkwNjEzOSwiZXhwIjoxNjc2OTkyNTM5fQ.oRCrh18q39F9AHaoEQabskVaiJKZb7HKpVueetYLejM"
   },
   {
     "username": "rafinha0206",
+    "roles": { "User": 2001 },
     "password": "$2b$10$AZAadwbiKLTrZngnErgkMu9XP5qsApLerQDNPEk7JrWfII4wekf8K",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZmluaGEwMjA2IiwiaWF0IjoxNjc2OTA2NDMzLCJleHAiOjE2NzY5OTI4MzN9.s3yu-E2IVQ0n8fHwNprF8xcjgRIkN_Mz67Sakcvq6LU"
   },
   {
     "username": "monark",
+    "roles": { "User": 2001, "Editor": 1984, "Admin": 5150 },
     "password": "$2b$10$GQjI/ptdgvwh0HPtsL1tS.n3aK7LFKeXMt62R1jUN9dJRxfivBjZq",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vbmFyayIsImlhdCI6MTY3NjkwNjUzOCwiZXhwIjoxNjc2OTkyOTM4fQ.ZeRgtzy05kDmMNUPkTh-uZPRtzpWsAG7xuxgyOT89TE"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vbmFyayIsImlhdCI6MTY3NzA5ODY1MCwiZXhwIjoxNjc3MTg1MDUwfQ.jOphUuGir1t4D8WehPRCqwWujlyvJO41t3sfTH2Jnpo"
+  },
+  {
+    "username": "rafinahcobaia",
+    "roles": { "User": 2001, "Editor": 1984 },
+    "password": "$2b$10$q6ssFWYQ0FjJL7IVylDsd./xEH2JS9StWrvzV5lQWy0Tu65/7Jr8m",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZmluYWhjb2JhaWEiLCJpYXQiOjE2NzcxMDAyODksImV4cCI6MTY3NzE4NjY4OX0.9B3iuVxjXbJOcEJ1OzBekBWnim4UfzImAgPmFJIV7yA"
   }
 ]
