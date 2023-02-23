@@ -35,11 +35,11 @@ app.use(express.json()); // built-in middleware for json
 // Middleware for cookies
 app.use(cookieParser());
 
-app.use("/", express.static(path.join(__dirname, "/public"))); // set public
+//app.use("/", express.static(path.join(__dirname, "/public")));
 
 // Routes
 
-app.use("/", require("./routes/root")); // set root("/") route
+app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/api/register"));
 app.use("/auth", require("./routes/api/auth"));
 app.use("/refresh", require("./routes/api/refresh"));
@@ -62,4 +62,7 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler); // handle errors
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+mongoose.connection.once("open", () => {
+  console.log("Connect to db");
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});

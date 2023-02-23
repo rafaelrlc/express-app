@@ -572,3 +572,4 @@
 20230222	18:13:36	8c73512b-febb-43a7-ae88-545d22b3e964	POST 	undefined 	/employees
 20230222	18:13:50	e898cec4-da3f-4fc0-b713-4885484287d0	POST 	undefined 	/employees
 20230222	18:13:51	90cbd52e-04aa-42bb-81e0-1b9f170a998c	POST 	undefined 	/employees
+20230222	22:24:36	29933f38-337c-48c4-af15-37ae00921935	POST 	undefined 	/register
