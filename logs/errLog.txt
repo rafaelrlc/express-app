@@ -10,3 +10,20 @@
     |     property 's' -> object with constructor 'Object'
     |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
     --- property 'client' closes the circle
+20230223	13:42:01	bf6b2eaa-349a-436c-9a72-d02f20958b7d	ReferenceError: json is not defined
+20230223	13:43:15	42f41385-46ca-4333-b670-54959f9daa60	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+20230223	13:43:16	8e582aae-dec3-4715-afa9-ec4aa0c1ae9e	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+20230223	13:43:36	f8fddcf7-d633-479a-b9a0-5cb858d0e29f	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+20230223	13:50:31	ccf1eb5d-8f3f-4faa-a171-d52eca002740	ReferenceError: data is not defined
