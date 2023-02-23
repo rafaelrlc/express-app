@@ -30,7 +30,7 @@ app.use(credentials);
 app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false })); // built-in middleware to handle urlencoded data
-app.use(express.json()); // built-in middleware for json
+app.use(express.json());
 
 // Middleware for cookies
 app.use(cookieParser());
