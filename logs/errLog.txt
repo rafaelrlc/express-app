@@ -4,3 +4,9 @@
 20230217	00:20:58	e4e4151e-4a6a-478b-ba02-e0f60f969ff6	TypeError: res.send.json is not a function
 20230217	00:20:59	9e75356c-cc38-4c57-823a-a595b213b823	TypeError: res.send.json is not a function
 20230217	15:14:11	179652b5-1011-4397-a63a-d6403b76d12b	SyntaxError: Unexpected token : in JSON at position 32
+20230223	13:38:16	a0445ecd-edf4-4971-ac26-8b6a052a6914	ReferenceError: json is not defined
+20230223	13:40:36	151b8307-e0b9-4dbe-8014-9fe6c6d16ffd	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle

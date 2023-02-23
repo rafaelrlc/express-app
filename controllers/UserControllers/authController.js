@@ -1,15 +1,7 @@
-const usersDB = {
-  users: require("../model/users.json"),
-  setUsers: function (data) {
-    this.users = data;
-  },
-};
+const User = require("../../model/User");
 
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-require("dotenv").config();
-const fsPromisses = require("fs").promises;
-const path = require("path");
 
 const userLogin = async (req, res) => {
   const { user, pwd } = req.body;
@@ -18,7 +10,7 @@ const userLogin = async (req, res) => {
   }
 
   // evaluate user
-  const foundUser = usersDB.users.find((person) => person.username === user);
+  const foundUser = await User.findOne({ username: user }).exec();
   if (!foundUser) {
     res.sendStatus(401); // Unauthorized
   }
@@ -45,19 +37,9 @@ const userLogin = async (req, res) => {
     );
 
     // saving refresh token with current user
-
-    const othersUsers = usersDB.users.filter(
-      (person) => person.username !== foundUser.username
-    ); // returns all users beside the current user
-
-    const currentUser = { ...foundUser, refreshToken }; // {...foundUser, refreshToken} means {username, password, refreshToken}
-
-    usersDB.setUsers([...othersUsers, currentUser]); // {...othersUsers, foundUsers} means {user1, user2, user3, ..., othersUsers}
-    //console.log(usersDB);
-    await fsPromisses.writeFile(
-      path.join(__dirname, "..", "model", "users.json"),
-      JSON.stringify(usersDB.users)
-    );
+    foundUser.refreshToken = refreshToken;
+    const result = await foundUser.save();
+    console.log(result);
 
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
