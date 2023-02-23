@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {
   handleRefreshToken,
-} = require("../../controllers/refreshTokenController");
+} = require("../../controllers/UserControllers/refreshTokenController");
 
 router.get("/", handleRefreshToken);
 
