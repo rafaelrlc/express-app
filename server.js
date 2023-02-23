@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -8,12 +9,18 @@ const errorHandler = require("./middleware/errorHandler");
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
 const credentials = require("./middleware/credentials");
+const mongoose = require("mongoose");
+const connectDB = require("./config/dbConn");
 
 const PORT = process.env.PORT || 3500;
 
-app.use(logger);
+// Connect to MongoDB
+connectDB();
 
 // Middlewares
+
+// Logger middleware
+app.use(logger);
 
 // Handle options credentials check - before CORS.
 // and fetch cookies credentials requirement.
