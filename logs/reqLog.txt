@@ -627,3 +627,5 @@
 20230224	12:36:28	16141ce4-190f-4084-8dd1-f9780b6eaabb	POST 	undefined 	/auth
 20230224	12:36:38	9503db64-ce89-4f1d-a937-19aaa7921540	GET 	undefined 	/employees
 20230224	12:36:52	9007c482-2438-4464-bd22-6ed89eaa2038	POST 	undefined 	/employees
+20230224	12:52:09	af16d110-7987-47d5-9d35-06e8fb9af10c	POST 	undefined 	/auth
+20230224	12:52:21	0896112f-9273-4aff-94f3-4a4b0f17ebf0	GET 	undefined 	/employees
