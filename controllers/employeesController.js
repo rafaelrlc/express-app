@@ -24,7 +24,7 @@ const createEmployee = async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-  res.status(201).json(result);
+  res.json(result);
 };
 
 const updateEmployee = async (req, res) => {
