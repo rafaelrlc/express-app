@@ -624,3 +624,6 @@
 20230224	12:19:12	acd9e610-7253-4d5b-91b3-a19e23d498e6	DELETE 	undefined 	/employees/63f8d4873c4a26067d7b7528
 20230224	12:19:35	cd50c421-d24b-4369-bc24-757247f92ae7	DELETE 	undefined 	/employees/
 20230224	12:20:47	458ce70b-7dbe-4500-aa47-14c7656491fb	DELETE 	undefined 	/employees/
+20230224	12:36:28	16141ce4-190f-4084-8dd1-f9780b6eaabb	POST 	undefined 	/auth
+20230224	12:36:38	9503db64-ce89-4f1d-a937-19aaa7921540	GET 	undefined 	/employees
+20230224	12:36:52	9007c482-2438-4464-bd22-6ed89eaa2038	POST 	undefined 	/employees
